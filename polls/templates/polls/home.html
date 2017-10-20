@@ -1,0 +1,478 @@
+{% load staticfiles %}
+<html>
+
+<head>
+	<title>
+		Bal Vidya Niketan
+	</title>
+	<link rel="stylesheet" href="{% static 'css/base.css' %}" >
+</head>
+
+<body>
+
+	<h1 align="center">
+			<u> Notice Board </u>
+	</h1>
+	
+	<h2> Choose the class of your ward: </h2> 
+	<br>
+	<br>
+	<br>
+	<br>
+	
+	<button type="button" onclick = "f1A()"> 1A </button>
+	
+	<script>
+	function f1A()
+	{
+		    var e = document.getElementById('1A');
+			if (e.style.display == 'block' || e.style.display=='')
+			{
+				e.style.display = 'none';
+			}
+			else 
+			{
+				e.style.display = 'block';
+			}
+	}
+	</script>
+	
+	<div class="container" id="1A" style = "display:none" >
+	
+		{% for post in object_list reversed %}
+			{% if post.std|stringformat:"s" == "1A"  %}
+				<div class="post">
+			 
+				 <h2> <button class = "n" type="button" onclick="f('{{ post.text }}')"> 
+			 		{{ post.author }}_{{ post.title}} 
+			 	</button></h2>
+			 	<br><br>
+			 
+			 	<script>
+
+			 	function f(s) 
+			 	{
+		 	 		myWindow=window.open('','','width=1600,height=2100')
+					myWindow.document.write(s)
+					myWindow.focus()
+				}
+
+				</script>
+		   		 </div>
+   		 	{% endif %}
+    	{% endfor %}
+    
+    </div>
+    
+	<br>
+    <button type="button" onclick = "f1B()"  class="a"  > 1B </button>
+	
+	<script>
+	function f1B()
+	{
+				    var e = document.getElementById('1B');
+			if (e.style.display == 'block' || e.style.display=='')
+			{
+				e.style.display = 'none';
+			}
+			else 
+			{
+				e.style.display = 'block';
+			}
+	}
+	</script>
+	
+	<div class="container" id="1B" style = "display:none" >
+	
+		{% for post in object_list reversed %}
+			{% if post.std|stringformat:"s" == "1B"  %}
+				<div class="post">
+			 
+				 <h2> <button class = "n" type="button" onclick="f('{{ post.text }}')"> 
+			 		{{ post.author }}_{{ post.title}} 
+			 	</button></h2>
+			 <br><br>
+			 
+			 	<script>
+
+			 	function f(s) 
+			 	{
+		 	 		myWindow=window.open('','','width=1600,height=2100')
+					myWindow.document.write(s)
+					myWindow.focus()
+				}
+
+				</script>
+		   		 </div>
+   		 	{% endif %}
+    	{% endfor %}
+    
+    </div>
+	 
+	<br>
+		
+	<button type="button" onclick = "f2A()" > 2A </button>
+	
+	<script>
+	function f2A()
+	{
+				    var e = document.getElementById('2A');
+			if (e.style.display == 'block' || e.style.display=='')
+			{
+				e.style.display = 'none';
+			}
+			else 
+			{
+				e.style.display = 'block';
+			}
+	}
+	</script>
+	
+	<div class="container" id="2A" style = "display:none" >
+	
+		{% for post in object_list reversed %}
+			{% if post.std|stringformat:"s" == "2A"  %}
+				<div class="post">
+			 
+				 <h2> <button class = "n" type="button" onclick="f('{{ post.text }}')"> 
+			 		{{ post.author }}_{{ post.title}} 
+			 	</button></h2>
+			 	<br><br>
+			 
+			 	<script>
+
+			 	function f(s) 
+			 	{
+		 	 		myWindow=window.open('','','width=1600,height=2100')
+					myWindow.document.write(s)
+					myWindow.focus()
+				}
+
+				</script>
+		   		 </div>
+   		 	{% endif %}
+    	{% endfor %}
+    </div>
+    
+	   <br> 
+    <button type="button" onclick = "f2B()" class="a" > 2B </button>
+	
+	<script>
+	function f2B()
+	{
+				    var e = document.getElementById('2B');
+			if (e.style.display == 'block' || e.style.display=='')
+			{
+				e.style.display = 'none';
+			}
+			else 
+			{
+				e.style.display = 'block';
+			}
+	}
+	</script>
+	
+	<div class="container" id="2B" style = "display:none" >
+	
+		{% for post in object_list reversed %}
+			{% if post.std|stringformat:"s" == "2B"  %}
+				<div class="post">
+			 
+				 <h2> <button class = "n" type="button" onclick="f('{{ post.text }}')"> 
+			 		{{ post.author }}_{{ post.title}} 
+			 	</button></h2>
+			 	<br><br>
+			 
+			 	<script>
+
+			 	function f(s) 
+			 	{
+		 	 		myWindow=window.open('','','width=1600,height=2100')
+					myWindow.document.write(s)
+					myWindow.focus()
+				}
+
+				</script>
+		   		 </div>
+   		 	{% endif %}
+    	{% endfor %}
+    
+    </div>
+	 
+	<br>
+	
+	<button type="button" onclick = "f3A()"  > 3A </button>
+	
+	<script>
+	function f3A()
+	{
+				    var e = document.getElementById('3A');
+			if (e.style.display == 'block' || e.style.display=='')
+			{
+				e.style.display = 'none';
+			}
+			else 
+			{
+				e.style.display = 'block';
+			}
+	}
+	</script>
+	
+	<div class="container" id="3A" style = "display:none" >
+	
+		{% for post in object_list reversed %}
+			{% if post.std|stringformat:"s" == "3A"  %}
+				<div class="post">
+			 
+				 <h2> <button class = "n" type="button" onclick="f('{{ post.text }}')"> 
+			 		{{ post.author }}_{{ post.title}} 
+			 	</button></h2>
+			 	<br><br>
+			 
+			 	<script>
+
+			 	function f(s) 
+			 	{
+		 	 		myWindow=window.open('','','width=1600,height=2100')
+					myWindow.document.write(s)
+					myWindow.focus()
+				}
+
+				</script>
+		   		 </div>
+   		 	{% endif %}
+    	{% endfor %}
+    
+    </div>
+	    <br>
+    <button type="button" onclick = "f3B()" class="a"> 3B </button>
+	
+	<script>
+	function f3B()
+	{
+				    var e = document.getElementById('3B');
+			if (e.style.display == 'block' || e.style.display=='')
+			{
+				e.style.display = 'none';
+			}
+			else 
+			{
+				e.style.display = 'block';
+			}
+	}
+	</script>
+	
+	<div class="container" id="3B" style = "display:none" >
+	
+		{% for post in object_list reversed %}
+			{% if post.std|stringformat:"s" == "3B"  %}
+				<div class="post">
+			 
+				 <h2> <button class = "n" type="button" onclick="f('{{ post.text }}')"> 
+			 		{{ post.author }}_{{ post.title}} 
+			 	</button></h2>
+			 	<br><br>
+			 
+			 	<script>
+
+			 	function f(s) 
+			 	{
+		 	 		myWindow=window.open('','','width=1600,height=2100')
+					myWindow.document.write(s)
+					myWindow.focus()
+				}
+
+				</script>
+		   		 </div>
+   		 	{% endif %}
+    	{% endfor %}
+    
+    </div>
+	
+	<br>
+	<button type="button" onclick = "f4A()" > 4A </button>
+	
+	<script>
+	function f4A()
+	{
+				    var e = document.getElementById('4A');
+			if (e.style.display == 'block' || e.style.display=='')
+			{
+				e.style.display = 'none';
+			}
+			else 
+			{
+				e.style.display = 'block';
+			}
+	}
+	</script>
+	
+	<div class="container" id="4A" style = "display:none" >
+	
+		{% for post in object_list reversed %}
+			{% if post.std|stringformat:"s" == "4A"  %}
+				<div class="post">
+			 
+				 <h2> <button class = "n"  type="button" onclick="f('{{ post.text }}')"> 
+			 		{{ post.author }}_{{ post.title}} 
+			 	</button></h2>
+			 	<br><br>
+			 
+			 	<script>
+
+			 	function f(s) 
+			 	{
+		 	 		myWindow=window.open('','','width=1600,height=2100')
+					myWindow.document.write(s)
+					myWindow.focus()
+				}
+
+				</script>
+		   		 </div>
+   		 	{% endif %}
+    	{% endfor %}
+    
+    </div>
+    
+	 <br>   
+    <button type="button" onclick = "f4B()" class="a"> 4B </button>
+	
+	<script>
+	function f4B()
+	{
+				    var e = document.getElementById('4B');
+			if (e.style.display == 'block' || e.style.display=='')
+			{
+				e.style.display = 'none';
+			}
+			else 
+			{
+				e.style.display = 'block';
+			}
+	}
+	</script>
+	
+	<div class="container" id="4B" style = "display:none" >
+	
+		{% for post in object_list reversed %}
+			{% if post.std|stringformat:"s" == "4B"  %}
+				<div class="post">
+			 
+				 <h2> <button class = "n" type="button" onclick="f('{{ post.text }}')"> 
+			 		{{ post.author }}_{{ post.title}} 
+			 	</button></h2>
+			 	<br><br>
+			 
+			 	<script>
+
+			 	function f(s) 
+			 	{
+		 	 		myWindow=window.open('','','width=1600,height=2100')
+					myWindow.document.write(s)
+					myWindow.focus()
+				}
+
+				</script>
+		   		 </div>
+   		 	{% endif %}
+    	{% endfor %}
+    
+    </div>
+	 
+	 
+	<br>
+	<button type="button" onclick = "f5A()"> 5A </button>
+	
+	<script>
+	function f5A()
+	{
+				    var e = document.getElementById('5A');
+			if (e.style.display == 'block' || e.style.display=='')
+			{
+				e.style.display = 'none';
+			}
+			else 
+			{
+				e.style.display = 'block';
+			}
+	}
+	</script>
+	
+	<div class="container" id="5A" style = "display:none" >
+	
+		{% for post in object_list reversed %}
+			{% if post.std|stringformat:"s" == "5A"  %}
+				<div class="post">
+			 
+				 <h2> <button class = "n" type="button" onclick="f('{{ post.text }}')"> 
+			 		{{ post.author }}_{{ post.title}} 
+			 	</button></h2>
+			 	<br><br>
+			 
+			 
+			 	<script>
+
+			 	function f(s) 
+			 	{
+		 	 		myWindow=window.open('','','width=1600,height=2100')
+					myWindow.document.write(s)
+					myWindow.focus()
+				}
+
+				</script>
+		   		 </div>
+   		 	{% endif %}
+    	{% endfor %}
+    
+    </div>
+    
+	  <br>  
+    <button type="button" onclick = "f5B()"  class="a"> 5B </button>
+	
+	<script>
+	function f5B()
+	{
+				    var e = document.getElementById('5B');
+			if (e.style.display == 'block' || e.style.display=='')
+			{
+				e.style.display = 'none';
+			}
+			else 
+			{
+				e.style.display = 'block';
+			}
+	}
+	</script>
+	
+	<div class="container" id="5B" style = "display:none" >
+	
+		{% for post in object_list reversed %}
+			{% if post.std|stringformat:"s" == "5B"  %}
+				<div class="post">
+			 
+				 <h2> <button class = "n" type="button" onclick="f('{{ post.text }}')"> 
+			 		{{ post.author }}_{{ post.title}} 
+			 	</button></h2>
+			 	<br><br>
+			 
+			 	<script>
+
+			 	function f(s) 
+			 	{
+		 	 		myWindow=window.open('','','width=1600,height=2100')
+					myWindow.document.write(s)
+					myWindow.focus()
+				}
+
+				</script>
+		   		 </div>
+   		 	{% endif %}
+    	{% endfor %}
+    
+    </div>
+	 
+	 
+	<br>
+</body>
+
+</html>

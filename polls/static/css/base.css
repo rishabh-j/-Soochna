@@ -1,0 +1,19 @@
+h1 
+{
+	color : white;
+	font-family : Georgia;
+	font-size : 72px;
+}
+
+h2
+{
+	position: absolute;
+	left: 2%;
+	color : white;
+}
+body 
+{
+  text-align: left;
+  margin : 20px;  
+  background-color: #004280;
+} 
